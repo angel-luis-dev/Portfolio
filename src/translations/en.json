@@ -1,0 +1,16 @@
+{
+  "tecnologies": "Technologies",
+  "experience": "Experience",
+  "projects": "Projects",
+  "formation": "Education",
+  "aboutMe": "About me",
+  "spanish": "Spanish",
+  "english": "English",
+  "fullStackDeveloper": "Fullstack Developer",
+  "developer": "Developer",
+  "dataBase": "Database",
+  "recetaDescription": "Project to manage medical prescriptions.",
+  "finanzasDescription": "Project to handle organizational finances.",
+  "aboutMe1": "Technology enthusiast. Frontend and backend developer. I can create engaging user interfaces with a focus on user experience, as well as organized and efficient APIs. Always eager to keep learning and committed to product quality.",
+  "aboutMe2": "Collaborative-minded programmer focused on quality. Specialized in clean, scalable code, I learn quickly and solve complex problems with attention to detail and clear communication."
+}

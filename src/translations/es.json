@@ -1,0 +1,16 @@
+{
+  "tecnologies": "Tecnologias",
+  "experience": "Experiencia",
+  "projects": "Proyectos",
+  "formation": "Formación",
+  "aboutMe": "Sobre mi",
+  "spanish": "Español",
+  "english": "Inglés",
+  "fullStackDeveloper": "Desarrollador Fullstack",
+  "developer": "Desarrollador",
+  "dataBase": "Base de datos",
+  "recetaDescription": "Proyecto para controlar Recetas Médicas.",
+  "finanzasDescription": "Proyecto para manejar las finanzas de organizaciones.",
+  "aboutMe1": "Entusiasta de la tecnología. Desarrollador de frontend y backend. Puedo crear interfaces atractivas priorizando la experiencia de usuario así como APIS organizadas y eficientes. Siempre abierto a seguir aprendiendo y comprometido con la calidad de los productos.",
+  "aboutMe2": "Programador con mentalidad colaborativa y foco en la calidad. Especializado en código limpio y escalable, aprendo rápido y resuelvo problemas complejos con atención al detalle y comunicación clara."
+}
