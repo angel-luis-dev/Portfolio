@@ -73,7 +73,7 @@
 .navigation-menu a{
   font-size: clamp(10px, 0.8em, 14px);
   color: rgba(255, 255, 255, 0.4);
-  transition: all 0.2s 0.1s;
+  transition: all 0.2s 0.1s ease-in-out;
 }
 
 .navigation-menu a:hover{
@@ -142,12 +142,12 @@ main > *{
     left: -15px;
     background: linear-gradient(to right, rgb(75, 75, 73, 0.6), rgb(75, 75, 73, 0.2));
     border-radius: 24px;
-    transform: skewX(-6deg) rotate(-3deg);
+    transform: skewX(0) rotate(0);
     transition: all 0.4s 0.1s;
 }
 
 .area-data:hover::before{
-  transform: skewX(0) rotate(0);
+  transform: skewX(-6deg) rotate(-3deg);
 }
 
 .area-data > div{
@@ -168,7 +168,7 @@ main > *{
     left: -16px;
     background-color: #848451;
     border-radius: 8px;
-    transform: skewX(12deg);
+    transform: skewX(0);
     transition: all 0.4s 0.2s;
     /* transform: skewX(6deg); */
     /* border: 1px solid #54554a; */
@@ -176,7 +176,7 @@ main > *{
 }
 
 .area-data:hover .box-title::before{
-  transform: skewX(0);
+  transform: skewX(12deg);
 }
 
 .area-data .primary{
@@ -221,22 +221,21 @@ main > *{
 .area-image::before{
     position: absolute;
     content: '';
-    width: 95%;
     height: 100%;
     top: -40px;
-    right: 23px;
     background: linear-gradient(to bottom,  rgba(75, 75, 73, 0.2) 30% 50%, rgba(75, 75, 73, 0.6));
-    border-radius: 26px 24px 18px 42px;
-    transform: rotate(-10deg);
-    /* transform: rotate(350deg); */
     transition: all 0.4s 0.2s;
-}
-
-.area-image:hover::before{
     width: 93%;
     right: 4px;
     transform: rotate(0);
     border-radius: 28px 28px 36px 18px;
+}
+
+.area-image:hover::before{
+    width: 95%;
+    right: 23px;
+    border-radius: 26px 24px 18px 42px;
+    transform: rotate(-10deg);
 }
 
 /*tecnologies styles*/
@@ -325,12 +324,33 @@ main > *{
       /* font-family: 'Courier New', Courier, monospace; */
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 4rem;
-    color: #313131;
-    text-shadow: 0 -1px 0px #d4cece, 0 -2px 8px #a59a9a, 0 2px 4px rgb(135 131 131), 0 2px 0px rgb(109 91 91);
+    /* color: #313131; */
+    /* text-shadow: 0 -1px 0px #d4cece, 0 -2px 8px #a59a9a, 0 2px 4px rgb(135 131 131), 0 2px 0px rgb(109 91 91); */
     text-align: center;
     /* font-weight: 800; */
     letter-spacing: -1px;
     text-transform: uppercase;
+
+    view-timeline-name: --title-section;
+    view-timeline-axis: block; /*eje en que va a verse la animacion */
+    animation-timeline: --title-section;
+    animation-name: show; /*seleccionar la animacion*/
+    animation-range: entry 40% cover 70%; /*cuando empieza y termina la animacion */
+    animation-fill-mode: both;  /*se anima en ambos sentidos*/
+}
+
+
+
+@keyframes show {
+  from{
+    scale: 90%;
+    color: #3a3636;
+  }
+  to{
+    scale: 100%;
+    color: #313131;
+    text-shadow: 0 -1px 0px #d4cece, 0 -2px 8px #a59a9a, 0 2px 4px rgb(135 131 131), 0 2px 0px rgb(109 91 91);
+  }
 }
 
 .card-info{
