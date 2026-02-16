@@ -24,6 +24,9 @@ export interface Translations {
   dataBase: string;
   recetaDescription: string;
   finanzasDescription: string;
+  distraDescription: string;
+  dgesicDescription: string;
+  trazasDescription: string;
   aboutMe1: string;
   aboutMe2: string;
   // añade todas tus claves aquí
