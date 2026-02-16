@@ -27,7 +27,11 @@ export interface Translations {
   distraDescription: string;
   dgesicDescription: string;
   trazasDescription: string;
+  aboutMe1Title: string;
   aboutMe1: string;
+  aboutMe2Title: string;
   aboutMe2: string;
+  aboutMe3Title: string;
+  aboutMe3: string;
   // añade todas tus claves aquí
 }

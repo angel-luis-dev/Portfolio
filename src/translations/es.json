@@ -14,6 +14,10 @@
   "distraDescription": "Proyecto para gestionar clientes y contratos.",
   "dgesicDescription": "Proyecto ERP para la gestión de sistemas internos de una empresa.",
   "trazasDescription": "Proyecto para almacenar y organizar trazas.",
-  "aboutMe1": "Entusiasta de la tecnología. Desarrollador Full Stack. Puedo crear interfaces atractivas priorizando la experiencia de usuario así como APIS organizadas y eficientes. Comprometido con la calidad de los productos y la mejora de la experiencia de usuario.",
-  "aboutMe2": "Programador con mentalidad colaborativa y foco en la calidad. Especializado en código limpio y escalable, aprendo rápido y resuelvo problemas complejos con atención al detalle y comunicación clara."
+  "aboutMe1Title": "Desarrollador Full Stack.",
+  "aboutMe1": "Especializado en crear interfaces atractivas e intuitivas priorizando la experiencia de usuario y APIS robustas y eficientes para garantizar un rendimiento óptimo.",
+  "aboutMe2Title": "Comprometido con la calidad de los productos.",
+  "aboutMe2": "Enfocado en hacer código limpio y escalable y la atención al detalle. Especializado la resolución de problemas complejos y la comunicación clara.",
+  "aboutMe3Title": "Entusiasta de la tecnología.",
+  "aboutMe3": "Creo en el aprendizaje continuo. Constantemente explorando e implementando las últimas innovaciones para crear soluciones más eficientes."
 }

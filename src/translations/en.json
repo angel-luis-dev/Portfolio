@@ -6,11 +6,18 @@
   "aboutMe": "About me",
   "spanish": "Spanish",
   "english": "English",
-  "fullStackDeveloper": "Fullstack Developer",
+  "fullStackDeveloper": "Full Stack Developer",
   "developer": "Developer",
   "dataBase": "Database",
-  "recetaDescription": "Project to manage medical prescriptions.",
-  "finanzasDescription": "Project to handle organizational finances.",
-  "aboutMe1": "Technology enthusiast. Frontend and backend developer. I can create engaging user interfaces with a focus on user experience, as well as organized and efficient APIs. Always eager to keep learning and committed to product quality.",
-  "aboutMe2": "Collaborative-minded programmer focused on quality. Specialized in clean, scalable code, I learn quickly and solve complex problems with attention to detail and clear communication."
+  "recetaDescription": "Project for managing medical prescriptions.",
+  "finanzasDescription": "Project for managing organizational finances.",
+  "distraDescription": "Project for managing clients and contracts.",
+  "dgesicDescription": "ERP project for managing internal company systems.",
+  "trazasDescription": "Project for storing and organizing traces.",
+  "aboutMe1Title": "Full Stack Developer.",
+  "aboutMe1": "Specialized in creating attractive and intuitive interfaces prioritizing user experience and robust, efficient APIs to ensure optimal performance.",
+  "aboutMe2Title": "Committed to product quality.",
+  "aboutMe2": "Focused on writing clean, scalable code and attention to detail. Specialized in complex problem-solving and clear communication.",
+  "aboutMe3Title": "Technology enthusiast.",
+  "aboutMe3": "I believe in continuous learning. Constantly exploring and implementing the latest innovations to create more efficient solutions."
 }

@@ -338,6 +338,9 @@ main > * {
   padding: 18px;
   border-radius: 2px;
   backdrop-filter: blur(24px);
+  transition:
+    outline 0.1s 0.1s,
+    background-color 0.2s 0.2s;
 }
 
 .card-project:hover {
