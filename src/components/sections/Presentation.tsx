@@ -4,6 +4,7 @@ import Linkedin from '../../assets/icons/Linkedin';
 import photo from '../../assets/image/photo.png';
 import LinkSite from '../LinkSite';
 import useLanguage from '../../hooks/useLanguage';
+import Download from '../../assets/icons/Download';
 
 export interface PresentationProps {
   triggerRef: RefObject<HTMLDivElement>;
@@ -20,7 +21,7 @@ const Presentation: FC<PresentationProps> = ({triggerRef}) => {
             <div ref={triggerRef} className='links'>
                 <LinkSite link='https://github.com/angel-luis-dev' icon={<GitHub color='rgb(255,255,255)'/>} text='GitHub'/>
                 <LinkSite link='https://www.linkedin.com/in/angel-luis-rodr%C3%ADguez-molina-9574a11bb/' icon={<Linkedin color='rgb(255,255,255)'/>} text='Linkedin'/>
-                <LinkSite link='../../assets/document/CV.pdf' icon={<Linkedin color='rgb(255,255,255)'/>} text='CV' download={'CV Angel Luis Rodriguez Molina.pdf'}/>
+                <LinkSite link='../../assets/document/CV - Angel Luis Rodriguez Molina.pdf' icon={<Download color='rgb(255,255,255)'/>} text='CV' download={'CV Angel Luis Rodriguez Molina.pdf'}/>
             </div>
         </div>
         <div className="area-image">
