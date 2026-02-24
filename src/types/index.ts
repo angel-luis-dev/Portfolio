@@ -11,6 +11,20 @@ export interface IconProps extends React.SVGProps<SVGSVGElement> {
   color?: string;
 }
 
+export interface example {
+  type: 'PHOTO' | 'VIDEO';
+  content: string;
+}
+
+export interface ProjectType {
+  title: string;
+  description: string;
+  photo: string;
+  tecnologies: string[];
+  type: 'PERSONAL' | 'UCI';
+  examples?: example[];
+}
+
 export interface Translations {
   tecnologies: string;
   experience: string;

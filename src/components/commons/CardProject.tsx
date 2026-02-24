@@ -4,6 +4,7 @@ interface CardProjectProps {
   photo?: string;
   tecnologies?: string[];
   type?: string;
+  onClick?: () => void;
 }
 
 const CardProject = ({
@@ -12,9 +13,10 @@ const CardProject = ({
   photo,
   tecnologies,
   type,
+  onClick,
 }: CardProjectProps) => {
   return (
-    <div key={title} className="card-project">
+    <div key={title} className="card-project" onClick={onClick}>
       {type ? <div className="card-type">{type}</div> : null}
       <img
         src={photo}

@@ -1,11 +1,24 @@
 import useLanguage from '../../hooks/useLanguage';
-import CardProject from '../CardProject';
+import CardProject from '../commons/CardProject';
+import ModalProjectDetails from '../commons/ModalProjectDetails';
+import { useState } from 'react';
+import { ProjectType } from '@/types';
 import receta from '../../assets/image/receta.png';
+import {
+  distra1,
+  distra2,
+  distra3,
+  distra4,
+  distra5,
+} from '../../assets/image/distra';
 
 const Projects = () => {
   const { getLabel } = useLanguage();
+  const [selectedProject, setSelectedProject] = useState<ProjectType | null>(
+    null,
+  );
 
-  const projects = [
+  const projects: ProjectType[] = [
     {
       title: 'DuesMaster',
       description: getLabel('finanzasDescription'),
@@ -30,9 +43,16 @@ const Projects = () => {
     {
       title: 'DISTRA-CRM',
       description: getLabel('distraDescription'),
-      photo: '',
+      photo: distra1,
       tecnologies: ['ExtJs', 'PHP'],
       type: 'UCI',
+      examples: [
+        { type: 'PHOTO', content: distra1 },
+        { type: 'PHOTO', content: distra2 },
+        { type: 'PHOTO', content: distra3 },
+        { type: 'PHOTO', content: distra4 },
+        { type: 'PHOTO', content: distra5 },
+      ],
     },
     {
       title: 'TRAZAS',
@@ -61,9 +81,17 @@ const Projects = () => {
             description={x?.description}
             tecnologies={x?.tecnologies}
             type={x?.type}
+            onClick={() => {
+              console.log('open modal :>> ', x);
+              setSelectedProject(x);
+            }}
           />
         ))}
       </div>
+      <ModalProjectDetails
+        selectedProject={selectedProject}
+        setSelectedProject={setSelectedProject}
+      />
     </section>
   );
 };

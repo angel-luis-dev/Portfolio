@@ -3,7 +3,7 @@ import useLanguage from '../../hooks/useLanguage';
 import { Language } from '../../types';
 import GitHub from '../../assets/icons/GitHub';
 import Linkedin from '../../assets/icons/Linkedin';
-import LinkSite from '../LinkSite';
+import LinkSite from '../commons/LinkSite';
 import Download from '../../assets/icons/Download';
 
 export interface NavigationProps {

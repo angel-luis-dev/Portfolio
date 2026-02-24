@@ -431,3 +431,58 @@ main > * {
 .link-site:hover {
   color: var(--highlight-color);
 }
+
+/* Modal styles */
+
+.modal-back {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  /* background-color: rgba(0, 0, 0, 0.5); */
+}
+
+.modal-area {
+  background-color: var(--background-primary-color);
+  /* background-color: rgba(255, 255, 255); */
+  border-radius: 16px;
+  width: 90vw;
+  height: 96vh;
+  max-width: 99vw;
+  max-height: 99vh;
+  display: flex;
+  flex-flow: column;
+}
+
+.modal-title {
+  /* height: 40px; */
+  display: inline-flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #fff;
+  padding: 8px 12px 8px 16px;
+}
+
+.modal-close {
+  cursor: pointer;
+  border-radius: 24px;
+  background-color: transparent;
+  border: none;
+  transition: background-color 0.2s 0.1s;
+}
+
+.modal-close:hover {
+  background-color: var(--background-secondary-color);
+}
+
+.modal-content {
+  flex: 1;
+  padding: 18px;
+  /* background-color: var(--background-primary-color); */
+  /* background-color: rgba(255, 255, 255); */
+  /* border-radius: 16px;
+  width: 90vw;
+  height: 90vh; */
+}
