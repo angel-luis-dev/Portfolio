@@ -43,9 +43,9 @@ const Navigation: FC<NavigationProps> = ({ isTriggerVisible, isAffix }) => {
         </div>
         <div className="navigation-menu">
           <a href="#tecnologies">{getLabel('tecnologies')}</a>
+          <a href="#formation">{getLabel('formation')}</a>
           <a href="#experience">{getLabel('experience')}</a>
           <a href="#projects">{getLabel('projects')}</a>
-          <a href="#formation">{getLabel('formation')}</a>
           <a href="#about-me">{getLabel('aboutMe')}</a>
           <select
             id="select-language"

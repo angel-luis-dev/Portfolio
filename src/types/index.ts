@@ -14,6 +14,7 @@ export interface IconProps extends React.SVGProps<SVGSVGElement> {
 export interface example {
   type: 'PHOTO' | 'VIDEO';
   content: string;
+  description?: string;
 }
 
 export interface ProjectType {
@@ -37,6 +38,7 @@ export interface Translations {
   developer: string;
   dataBase: string;
   recetaDescription: string;
+  bankRegisterDescription: string;
   finanzasDescription: string;
   distraDescription: string;
   dgesicDescription: string;

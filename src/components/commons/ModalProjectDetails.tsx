@@ -1,18 +1,11 @@
 import { example, ProjectType } from '@/types';
 import Modal from './Modal';
-import { ReactNode, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 
 interface ModalProjectDetailsProps {
   selectedProject: ProjectType | null;
   setSelectedProject: (project: null) => void;
 }
-
-const stylesButtons = {
-  backgroundColor: 'transparent',
-  border: 'none',
-  cursor: 'pointer',
-  fontSize: 28,
-};
 
 const ModalProjectDetails = ({
   selectedProject,
@@ -21,14 +14,20 @@ const ModalProjectDetails = ({
   console.log('ModalProjectDetails :>> ', selectedProject);
   const [index, setIndex] = useState(0);
 
+  const examplesLength = selectedProject?.examples?.length || 0;
   const currentExample: example | ReactNode =
     selectedProject?.examples && selectedProject.examples[index]
       ? selectedProject.examples[index]
       : null;
 
+  useEffect(() => {
+    if (selectedProject === null) setIndex(0);
+  }, [selectedProject]);
+
   console.log(
     'currentExample :>> ',
     index,
+    examplesLength,
     selectedProject?.examples,
     selectedProject?.examples?.[index],
     currentExample,
@@ -37,19 +36,26 @@ const ModalProjectDetails = ({
     currentExample.type === 'PHOTO' ? (
       <img
         src={currentExample.content}
-        style={{
-          width: 'calc(100% - 60px)',
-          objectFit: 'contain',
-        }}
+        alt={currentExample?.description || 'image project'}
+        className="project-detail-image"
+        // style={{
+        //   maxWidth: '100%',
+        //   maxHeight: '100%', // La imagen no superará a su padre
+        //   objectFit: 'contain', // Mantiene la proporción sin recortar
+        //   display: 'block', // Elimina espacios fantasma debajo de la imagen
+        // }}
       />
     ) : (
-      <h1>No</h1>
+      <video
+        src={currentExample.content}
+        autoPlay
+        width={'100%'}
+        height={'100%'}
+      ></video>
     )
   ) : (
     <div>No hay datos</div>
   );
-
-  const examplesLength = selectedProject?.examples?.length || 0;
 
   const prev = () => {
     setIndex((prev) => (prev - 1 + examplesLength) % examplesLength);
@@ -61,25 +67,50 @@ const ModalProjectDetails = ({
 
   return (
     <Modal
-      title={'Project'}
+      title={selectedProject?.title}
       open={selectedProject !== null}
       onClose={() => {
         setSelectedProject(null);
       }}
     >
       <div
-        style={{
-          display: 'flex',
-          justifyContent: 'stretch',
-          gap: 4,
-          height: '-webkit-fill-available',
-        }}
+        className="project-detail-container"
+        // style={{
+        //   display: 'flex',
+        //   alignItems: 'center', // Centra verticalmente los botones y la imagen
+        //   justifyContent: 'center',
+        //   gap: 8,
+        //   height: '100%', // Asume que el padre (modal) tiene altura definida
+        //   overflow: 'hidden', // Evita que nada se salga
+        //   width: '100%',
+        // }}
       >
-        <button style={stylesButtons} onClick={prev}>
+        <button
+          className="project-detail-button"
+          aria-label="Imagen anterior"
+          onClick={prev}
+        >
           {'<'}
         </button>
-        {currentElement}
-        <button style={stylesButtons} onClick={next}>
+        <div
+          className="project-detail-image-wrapper"
+          // style={{
+          //   flex: 1, // Ocupa todo el espacio disponible entre los botones
+          //   display: 'flex',
+          //   justifyContent: 'center',
+          //   alignItems: 'center',
+          //   minHeight: 0, // Necesario en Flexbox para permitir que el hijo haga scroll o se encoja
+          //   maxHeight: '80vh', // Límite de altura relativo a la ventana (ajustable)
+          //   overflow: 'hidden',
+          // }}
+        >
+          {currentElement}
+        </div>
+        <button
+          className="project-detail-button"
+          aria-label="Imagen siguiente"
+          onClick={next}
+        >
           {'>'}
         </button>
       </div>
