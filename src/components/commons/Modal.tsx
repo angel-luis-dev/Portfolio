@@ -1,3 +1,4 @@
+import { useLockBodyScroll } from '@/hooks/useLockBodyScroll';
 import { ReactNode, useEffect } from 'react';
 
 interface ModalProps {
@@ -8,6 +9,10 @@ interface ModalProps {
 }
 
 const Modal = ({ open, onClose, title, children }: ModalProps) => {
+  // bloquear scroll de la pagina
+  useLockBodyScroll(open);
+
+  // cerrar ventana con tecla Esc
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {

@@ -10,6 +10,7 @@
   "developer": "Developer",
   "dataBase": "Database",
   "recetaDescription": "Project for managing medical prescriptions.",
+  "bankRegisterDescription": "Register for a client in a Bank Online.",
   "finanzasDescription": "Project for managing organizational finances.",
   "distraDescription": "Project for managing clients and contracts.",
   "dgesicDescription": "ERP project for managing internal company systems.",

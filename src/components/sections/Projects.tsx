@@ -3,7 +3,15 @@ import CardProject from '../commons/CardProject';
 import ModalProjectDetails from '../commons/ModalProjectDetails';
 import { useState } from 'react';
 import { ProjectType } from '@/types';
-import receta from '../../assets/image/receta.png';
+import {
+  bankRegister1,
+  // bankRegister2,
+  bankRegister3,
+  bankRegister4,
+  bankRegister5,
+  bankRegister6,
+  bankRegister7,
+} from '../../assets/image/bankregister';
 import {
   distra1,
   distra2,
@@ -11,6 +19,15 @@ import {
   distra4,
   distra5,
 } from '../../assets/image/distra';
+import {
+  duesmaster1,
+  duesmaster2,
+  duesmaster3,
+  duesmaster4,
+  duesmaster5,
+  duesmaster6,
+} from '../../assets/image/duesmaster';
+import { receta1, receta2, receta3, receta4 } from '../../assets/image/receta';
 
 const Projects = () => {
   const { getLabel } = useLanguage();
@@ -22,23 +39,46 @@ const Projects = () => {
     {
       title: 'DuesMaster',
       description: getLabel('finanzasDescription'),
-      photo: '',
+      photo: duesmaster1,
       tecnologies: ['React', 'NestJs'],
       type: 'PERSONAL',
+      examples: [
+        { type: 'PHOTO', content: duesmaster1 },
+        { type: 'PHOTO', content: duesmaster2 },
+        { type: 'PHOTO', content: duesmaster3 },
+        { type: 'PHOTO', content: duesmaster4 },
+        { type: 'PHOTO', content: duesmaster5 },
+        { type: 'PHOTO', content: duesmaster6 },
+      ],
+    },
+    {
+      title: 'Bank Register',
+      description: getLabel('bankRegisterDescription'),
+      photo: bankRegister1,
+      tecnologies: ['React'],
+      type: 'PERSONAL',
+      examples: [
+        { type: 'PHOTO', content: bankRegister1 },
+        // { type: 'VIDEO', content: bankRegister2 },
+        { type: 'PHOTO', content: bankRegister3 },
+        { type: 'PHOTO', content: bankRegister4 },
+        { type: 'PHOTO', content: bankRegister5 },
+        { type: 'PHOTO', content: bankRegister6 },
+        { type: 'PHOTO', content: bankRegister7 },
+      ],
     },
     {
       title: 'RECETA',
       description: getLabel('recetaDescription'),
-      photo: receta,
+      photo: receta1,
       tecnologies: ['React', 'Spring-boot'],
       type: 'PERSONAL',
-    },
-    {
-      title: 'DGSIC',
-      description: getLabel('dgesicDescription'),
-      photo: '',
-      tecnologies: ['ExtJs', 'Django'],
-      type: 'UCI',
+      examples: [
+        { type: 'PHOTO', content: receta1 },
+        { type: 'PHOTO', content: receta2 },
+        { type: 'PHOTO', content: receta3 },
+        { type: 'PHOTO', content: receta4 },
+      ],
     },
     {
       title: 'DISTRA-CRM',
