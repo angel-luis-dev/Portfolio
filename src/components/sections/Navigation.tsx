@@ -32,7 +32,7 @@ const Navigation: FC<NavigationProps> = ({ isTriggerVisible, isAffix }) => {
               icon={<GitHub color="rgb(255,255,255)" />}
             />
             <LinkSite
-              link="https://www.linkedin.com/in/angel-luis-rodr%C3%ADguez-molina-9574a11bb/"
+              link="https://www.linkedin.com/in/angel-luis-dev/"
               icon={<Linkedin color="rgb(255,255,255)" />}
             />
             <LinkSite
