@@ -67,24 +67,13 @@ const ModalProjectDetails = ({
 
   return (
     <Modal
-      title={selectedProject?.title}
+      title={`${selectedProject?.title} ( ${index + 1} / ${examplesLength} )`}
       open={selectedProject !== null}
       onClose={() => {
         setSelectedProject(null);
       }}
     >
-      <div
-        className="project-detail-container"
-        // style={{
-        //   display: 'flex',
-        //   alignItems: 'center', // Centra verticalmente los botones y la imagen
-        //   justifyContent: 'center',
-        //   gap: 8,
-        //   height: '100%', // Asume que el padre (modal) tiene altura definida
-        //   overflow: 'hidden', // Evita que nada se salga
-        //   width: '100%',
-        // }}
-      >
+      <div className="project-detail-container">
         <button
           className="project-detail-button"
           aria-label="Imagen anterior"
@@ -92,20 +81,7 @@ const ModalProjectDetails = ({
         >
           {'<'}
         </button>
-        <div
-          className="project-detail-image-wrapper"
-          // style={{
-          //   flex: 1, // Ocupa todo el espacio disponible entre los botones
-          //   display: 'flex',
-          //   justifyContent: 'center',
-          //   alignItems: 'center',
-          //   minHeight: 0, // Necesario en Flexbox para permitir que el hijo haga scroll o se encoja
-          //   maxHeight: '80vh', // Límite de altura relativo a la ventana (ajustable)
-          //   overflow: 'hidden',
-          // }}
-        >
-          {currentElement}
-        </div>
+        <div className="project-detail-image-wrapper">{currentElement}</div>
         <button
           className="project-detail-button"
           aria-label="Imagen siguiente"
