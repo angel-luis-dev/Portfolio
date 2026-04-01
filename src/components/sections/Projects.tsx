@@ -94,13 +94,13 @@ const Projects = () => {
         { type: 'PHOTO', content: distra5 },
       ],
     },
-    {
-      title: 'TRAZAS',
-      description: getLabel('trazasDescription'),
-      photo: '',
-      tecnologies: ['React', 'Node'],
-      type: 'UCI',
-    },
+    // {
+    //   title: 'TRAZAS',
+    //   description: getLabel('trazasDescription'),
+    //   photo: '',
+    //   tecnologies: ['React', 'Node'],
+    //   type: 'UCI',
+    // },
   ];
 
   return (
@@ -109,6 +109,7 @@ const Projects = () => {
       <div
         style={{
           display: 'grid',
+          padding: '4px 16px',
           gap: 24,
           gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))',
         }}
@@ -122,7 +123,6 @@ const Projects = () => {
             tecnologies={x?.tecnologies}
             type={x?.type}
             onClick={() => {
-              console.log('open modal :>> ', x);
               setSelectedProject(x);
             }}
           />

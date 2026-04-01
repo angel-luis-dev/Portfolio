@@ -1,7 +1,7 @@
 import { FC, RefObject } from 'react';
 import GitHub from '../../assets/icons/GitHub';
 import Linkedin from '../../assets/icons/Linkedin';
-import photo from '../../assets/image/photo.png';
+import photo from '../../assets/image/photo.webp';
 import LinkSite from '../commons/LinkSite';
 import useLanguage from '../../hooks/useLanguage';
 import Download from '../../assets/icons/Download';
@@ -41,7 +41,11 @@ const Presentation: FC<PresentationProps> = ({ triggerRef }) => {
         </div>
       </div>
       <div className="area-image">
-        <img className="image-me" src={photo} />
+        <img
+          className="image-me"
+          src={photo}
+          alt="Photo Angel Luis Rodriguez Molina"
+        />
       </div>
     </section>
   );

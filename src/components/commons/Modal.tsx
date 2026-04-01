@@ -9,10 +9,10 @@ interface ModalProps {
 }
 
 const Modal = ({ open, onClose, title, children }: ModalProps) => {
-  // bloquear scroll de la pagina
+  // block scroll
   useLockBodyScroll(open);
 
-  // cerrar ventana con tecla Esc
+  // close with Esc
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
