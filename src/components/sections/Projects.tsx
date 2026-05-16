@@ -5,7 +5,7 @@ import { useState } from 'react';
 import { ProjectType } from '@/types';
 import {
   bankRegister1,
-  // bankRegister2,
+  bankRegister2,
   bankRegister3,
   bankRegister4,
   bankRegister5,
@@ -59,7 +59,7 @@ const Projects = () => {
       type: 'PERSONAL',
       examples: [
         { type: 'PHOTO', content: bankRegister1 },
-        // { type: 'VIDEO', content: bankRegister2 },
+        { type: 'VIDEO', content: bankRegister2 },
         { type: 'PHOTO', content: bankRegister3 },
         { type: 'PHOTO', content: bankRegister4 },
         { type: 'PHOTO', content: bankRegister5 },

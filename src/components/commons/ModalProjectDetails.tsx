@@ -49,8 +49,15 @@ const ModalProjectDetails = ({
       <video
         src={currentExample.content}
         autoPlay
+        // width={'100%'}
+        // height={'100%'}
         width={'100%'}
         height={'100%'}
+        controls
+        style={{ zIndex: 9 }}
+        onLoad={() => {
+          console.log('load :>> ');
+        }}
       ></video>
     )
   ) : (
