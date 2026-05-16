@@ -4,7 +4,7 @@ Yo soy Angel Luis Rodríguez Molina y este es mi portafolio.
 
 ## Ver Online:
 
-https://699d21a3ee7d6f97990a7424--silly-puffpuff-479336.netlify.app
+https://69cd345b98b6230008360be9--silly-puffpuff-479336.netlify.app/
 
 ## Tecnologías
 
